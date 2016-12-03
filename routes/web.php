@@ -17,12 +17,13 @@ Route::get('/', function () {
 
 Route::group(['prefix'=>'adminzone'], function()
 {
-     Route::get('/', function()
-     {
-         return view('admin.dashboard');
-     });
+    Route::get('/', function()
+    {
+        return view('admin/dashboard');
+    });
+	Route::resource('articles','ArticlesController');
+	Route::resource('pages','PagesController');
+	Route::resource('categories','CategoriesController');
 });
-Route::get('/', function()
-{
-     return "Заглушка для главной страницы";
-});
+
+
