@@ -10,10 +10,13 @@
 | to using a Closure or controller method. Build something great!
 |
 */
-
+/*
 Route::get('/', function () {
     return view('welcome');
 });
+*/
+Route::get('/','FrontController@index');
+Route::get('/show/{id}','FrontController@show');
 
 Route::group(['prefix'=>'adminzone'], function()
 {
