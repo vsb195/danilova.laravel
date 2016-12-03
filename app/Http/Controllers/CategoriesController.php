@@ -20,14 +20,14 @@ class CategoriesController extends Controller
 	public function store(Request $request)
     {
         Category::create($request->all());
-        return back()->with('message','Категория добавлена');
+        return back()->with('message','В РљР°С‚РµРіРѕСЂРёСЏ РґРѕР±Р°РІР»РµРЅР°');
     }
 	
 	public function destroy($id)
 	{		
 		$category=Category::find($id); 
 		$category->delete();
-		return back()->with(array('message'=>"Категория ".$category->title." удалена"));
+		return back()->with(array('message'=>"В РљР°С‚РµРіРѕСЂРёСЏ ".$category->title." СѓРґР°Р»РµРЅР°"));
 	}
 	
 	public function edit($id)
@@ -41,6 +41,6 @@ class CategoriesController extends Controller
 		$category=Category::find($id);
 		$category->update($request->all());
 		$category->save();
-		return back()->with('message','Категория обновлена');
+		return back()->with('message','В РљР°С‚РµРіРѕСЂРёСЏ РѕР±РЅРѕРІР»РµРЅР°');
 	}
 }
