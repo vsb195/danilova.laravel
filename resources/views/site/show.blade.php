@@ -7,6 +7,7 @@
 <meta name="keywords" valeu="{{$article->meta_keywords}}">
 </head>
 <body>
+<img src="{{$article->preview}}"><br>
 <h2>{{$article->title}}</h2>
 <small>Дата статьи: {{$article->updated_at}}</small>
 <div>
