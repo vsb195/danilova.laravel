@@ -28,8 +28,18 @@ Route::group(['prefix'=>'adminzone'], function()
 	Route::resource('pages','PagesController');
 	Route::resource('categories','CategoriesController');
 });
+Route::group(array('before' => 'auth'), function() {
 
+    /*
+     | Sign Out (GET)
+     | --
+     */
+    Route::get('/account/sign-out', array(
+        'as' => 'account-sign-out',
+        'uses' => 'HomeController@getSignOut'
+    ));
 
+});
 
 Auth::routes();
 

@@ -8,11 +8,10 @@
     <!-- CSRF Token -->
     <meta name="csrf-token" content="{{ csrf_token() }}">
 
-    <title>Админка</title>
+    <title>{{ config('app.name', 'Laravel') }}</title>
 
     <!-- Styles -->
     <link href="/css/app.css" rel="stylesheet">
-	<link rel="stylesheet" href="{{asset('css/admin.css')}}">
 
     <!-- Scripts -->
     <script>
@@ -20,23 +19,7 @@
             'csrfToken' => csrf_token(),
         ]); ?>
     </script>
-	<script src="{{asset('js/jquery-2.1.4.min.js')}}"></script>
-
 </head>
-	<!--<div id="header">
-		<h1>Админка</h1>
-		<ul class="hr">
-			<li><a href="/">Главная</a></li>
-			<li><a href="/adminzone">Админка</a></li>
-			<li><a href="/adminzone/categories/">Категории</a></li>
-			<li><a href="/adminzone/articles">Статьи</a></li>
-			<li><a href="/adminzone/comments">Комментарии</a></li>
-			<li><a href="{{ URL::route('account-sign-out') }}">Выход</a></li>
-		</ul>
-	</div>
-	<div id="content">@yield('content')</div>
- -->
-
 <body>
     <div id="app">
         <nav class="navbar navbar-default navbar-static-top">
@@ -70,17 +53,17 @@
                             <li><a href="{{ url('/login') }}">Вход</a></li>
                             <li><a href="{{ url('/register') }}">Регистрация</a></li>
                         @else
-							<li><a href="/">Главная</a></li>
-							<li><a href="/adminzone">Админка</a></li>
-							<li><a href="/adminzone/categories/">Категории</a></li>
-							<li><a href="/adminzone/articles">Статьи</a></li>
-							<li><a href="/adminzone/comments">Комментарии</a></li>
                             <li class="dropdown">
                                 <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-expanded="false">
                                     {{ Auth::user()->name }} <span class="caret"></span>
                                 </a>
 
                                 <ul class="dropdown-menu" role="menu">
+									<li>
+                                        <a href="/adminzone">
+                                            Панель управления
+                                        </a>
+                                    </li>
                                     <li>
                                         <a href="{{ url('/logout') }}"
                                             onclick="event.preventDefault();
@@ -93,8 +76,7 @@
                                         </form>
                                     </li>
                                 </ul>
-                            </li>							
-							<!--<li><a href="{{ URL::route('account-sign-out') }}">Выход</a></li>-->
+                            </li>
                         @endif
                     </ul>
                 </div>
