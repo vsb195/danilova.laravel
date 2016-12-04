@@ -1,29 +1,20 @@
 @extends('admin.main')
-
 @section('content')
-
+	<script src="{{asset('js/nicEdit.js')}}"></script>
+	<script type="text/javascript">
+		bkLib.onDomLoaded(function() { nicEditors.allTextAreas() });
+	</script>
 <form method="POST" action="{{action('ArticlesController@store')}}" enctype="multipart/form-data">
-
 Превью:<br>
-
 <input type="file" name="preview"><br>
-
 Название статьи:<br>
-
 <input type="text" name="title"><br>
-
 Текст статьи:<br>
-
-<textarea name="content"></textarea><br>
-
+<textarea name="content" style="width: 100%;"></textarea><br>
 Категория:<br>
-
 <select name="category_id">
-
 @foreach($categories as $category)
-
-<option value="{{$category->id}}">{{$category->title}}</option>
-
+	<option value="{{$category->id}}">{{$category->title}}</option>
 @endforeach
 
 </select><br>

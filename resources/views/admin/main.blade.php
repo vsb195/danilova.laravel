@@ -23,20 +23,6 @@
 	<script src="{{asset('js/jquery-2.1.4.min.js')}}"></script>
 
 </head>
-	<!--<div id="header">
-		<h1>Админка</h1>
-		<ul class="hr">
-			<li><a href="/">Главная</a></li>
-			<li><a href="/adminzone">Админка</a></li>
-			<li><a href="/adminzone/categories/">Категории</a></li>
-			<li><a href="/adminzone/articles">Статьи</a></li>
-			<li><a href="/adminzone/comments">Комментарии</a></li>
-			<li><a href="{{ URL::route('account-sign-out') }}">Выход</a></li>
-		</ul>
-	</div>
-	<div id="content">@yield('content')</div>
- -->
-
 <body>
     <div id="app">
         <nav class="navbar navbar-default navbar-static-top">
@@ -100,8 +86,9 @@
                 </div>
             </div>
         </nav>
-
-        @yield('content')
+		<div class="container">
+			@yield('content')
+		</div>
     </div>
 
     <!-- Scripts -->
