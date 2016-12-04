@@ -1,17 +1,23 @@
-<!DOCTYPE html>
-<html>
-<head>
-<meta charset="utf-8">
-<title>Блог</title>
-<meta name="description" value="{{$article->meta_description}}">
-<meta name="keywords" valeu="{{$article->meta_keywords}}">
-</head>
-<body>
-<img src="{{$article->preview}}"><br>
-<h2>{{$article->title}}</h2>
-<small>Дата статьи: {{$article->updated_at}}</small>
-<div>
-{{$article->content}}
+@extends('site.main')
+
+@section('content')
+<div class="container">
+    <div class="row">
+        <div class="col-md-1"></div>
+        <div class="col-md-10 ">
+            <div class="panel panel-default">
+                <div class="panel-heading"><img src="{{$article->preview}}" style="width:100%;"></div>
+
+                <div class="panel-body">
+                    <h2>{{$article->title}}</h2>
+					<small>Дата статьи: {{$article->updated_at}}</small>
+					<div>
+					{{$article->content}}
+					</div>
+                </div>
+            </div>
+        </div>
+        <div class="col-md-1"></div>
+    </div>
 </div>
-</body>
-</html>
+@endsection
