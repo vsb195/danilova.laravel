@@ -27,6 +27,13 @@ Route::group(['prefix'=>'adminzone'], function()
 	Route::resource('articles','ArticlesController');
 	Route::resource('pages','PagesController');
 	Route::resource('categories','CategoriesController');
+	Route::get('elfinder',function(){
+		return view('admin/elfinder');
+	});
+	
+	Route::get('connector','ElfinderController@connector');
+	Route::post('connector','ElfinderController@connector');
+
 });
 Route::group(array('before' => 'auth'), function() {
 
@@ -44,3 +51,5 @@ Route::group(array('before' => 'auth'), function() {
 Auth::routes();
 
 Route::get('/home', 'HomeController@index');
+
+

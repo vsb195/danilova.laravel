@@ -21,7 +21,28 @@
         ]); ?>
     </script>
 	<script src="{{asset('js/jquery-2.1.4.min.js')}}"></script>
-
+	<script src="{{asset('js/tinymce/tinymce.min.js')}}"></script>
+	<script>
+        tinymce.init({
+            plugins: "image",
+            selector: '#editor',
+            file_browser_callback : elFinderBrowser
+        });
+        function elFinderBrowser (field_name, url, type, win) {
+            tinymce.activeEditor.windowManager.open({
+                file: '/adminzone/elfinder',// use an absolute path!
+                title: 'elFinder 2.0',
+                width: 900,
+                height: 450,
+                resizable: 'yes'
+            }, {
+                setUrl: function (url) {
+                    win.document.getElementById(field_name).value = url;
+                }
+            });
+            return false;
+        }
+    </script>
 </head>
 <body>
     <div id="app">

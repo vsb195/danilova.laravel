@@ -10,7 +10,7 @@
 Название статьи:<br>
 <input type="text" name="title"><br>
 Текст статьи:<br>
-<textarea name="content" style="width: 100%;"></textarea><br>
+<textarea name="content" id="editor"></textarea><br>
 Категория:<br>
 <select name="category_id">
 @foreach($categories as $category)
@@ -18,7 +18,7 @@
 @endforeach
 
 </select><br>
-
+<a href="/adminzone/elfinder">Медиа</a>
 Разрешить комментарии?<br>
 
 <select name="comments_enable">
