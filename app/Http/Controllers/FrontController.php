@@ -17,8 +17,8 @@ class FrontController extends Controller
 	
 	public function show($id)
 	{
-		$article=Article::where('public','=',1)->find($id); //показываем статью если она опубликована
-		return view('site/show',['article'=>$article]);
+		$comments = Article::where('public', '=', 1)->find($id)->comments()->where('public', '=', '1')->get();
+		$article = Article::where('public', '=', 1)->find($id);
+		return view('site.show', ['article'=>$article, 'comments'=>$comments]);
 	}
-
 }

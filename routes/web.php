@@ -33,6 +33,9 @@ Route::group(['prefix'=>'adminzone'], function()
 	
 	Route::get('connector','ElfinderController@connector');
 	Route::post('connector','ElfinderController@connector');
+	Route::get('comments','CommentsController@show');
+	Route::get('comments/delete/{id}','CommentsController@delete');
+	Route::get('comments/published/{id}','CommentsController@published');
 
 });
 Route::group(array('before' => 'auth'), function() {
@@ -47,6 +50,7 @@ Route::group(array('before' => 'auth'), function() {
     ));
 
 });
+Route::post('/show/{id}','CommentsController@save');
 
 Auth::routes();
 

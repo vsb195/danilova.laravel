@@ -55,7 +55,7 @@
 .elfinder-resize-handle-hline,
 .elfinder-resize-handle-vline {
 	position:absolute;
-	background-image:url("../img/crop.gif");
+	background-image:url("../images/crop.gif");
 }
 
 .elfinder-resize-handle-hline {
@@ -140,7 +140,7 @@
 	left:50%;
 	margin-left:-100px;
 	text-align:center;
-	background:url(../img/progress.gif) center bottom repeat-x;
+	background:url(../images/progress.gif) center bottom repeat-x;
 }
 
 .elfinder-resize-row { margin-bottom:9px; position:relative;}
@@ -323,7 +323,7 @@ div.elfinder-cwd-wrapper-list tr.ui-state-default td span.ui-icon {
 	height:96px;
 	float:left;
 	margin-right:1em;
-	background:url('../img/logo.png') center center no-repeat;
+	background:url('../images/logo.png') center center no-repeat;
 }
 
 .elfinder-help h3 { font-size:1.5em; margin:.2em 0 .3em 0; }
@@ -482,7 +482,7 @@ div.elfinder-cwd-wrapper-list tr.ui-state-default td span.ui-icon {
 	height: 3px;
 	content: '';
 	left: 0;
-	background-image: url(../img/progress.gif);
+	background-image: url(../images/progress.gif);
 	opacity: .6;
 	pointer-events: none;
 }
@@ -519,7 +519,7 @@ div.elfinder-cwd-wrapper-list tr.ui-state-default td span.ui-icon {
 	position:absolute;
 	width:16px;
 	height:16px;
-	background-image:url(../img/toolbar.png);
+	background-image:url(../images/toolbar.png);
 	background-repeat:no-repeat;
 	background-position:0 -528px;
 }
@@ -566,7 +566,7 @@ div.elfinder-cwd-wrapper-list tr.ui-state-default td span.ui-icon {
 	height:16px;
 	left:42px;
 	top:60px;
-	background:url('../img/toolbar.png') 0 -96px no-repeat;
+	background:url('../images/toolbar.png') 0 -96px no-repeat;
 	display: block;
 }
 
@@ -700,11 +700,11 @@ div.elfinder-cwd-wrapper-list tr.ui-state-default td span.ui-icon {
 }
 
 /* root icon of each volume */
-.elfinder-navbar-root-local.elfinder-contextmenu-icon { background-image:url("../img/volume_icon_local.png"); }
-.elfinder-navbar-root-ftp.elfinder-contextmenu-icon { background-image:url("../img/volume_icon_ftp.png"); }
-.elfinder-navbar-root-sql.elfinder-contextmenu-icon { background-image:url("../img/volume_icon_sql.png"); }
-.elfinder-navbar-root-dropbox.elfinder-contextmenu-icon { background-image:url("../img/volume_icon_dropbox.png"); }
-.elfinder-navbar-root-googledrive.elfinder-contextmenu-icon { background-image:url("../img/volume_icon_googledrive.png"); }
+.elfinder-navbar-root-local.elfinder-contextmenu-icon { background-image:url("../images/volume_icon_local.png"); }
+.elfinder-navbar-root-ftp.elfinder-contextmenu-icon { background-image:url("../images/volume_icon_ftp.png"); }
+.elfinder-navbar-root-sql.elfinder-contextmenu-icon { background-image:url("../images/volume_icon_sql.png"); }
+.elfinder-navbar-root-dropbox.elfinder-contextmenu-icon { background-image:url("../images/volume_icon_dropbox.png"); }
+.elfinder-navbar-root-googledrive.elfinder-contextmenu-icon { background-image:url("../images/volume_icon_googledrive.png"); }
 
 
 /* text in item */
@@ -736,7 +736,7 @@ div.elfinder-cwd-wrapper-list tr.ui-state-default td span.ui-icon {
 .elfinder .elfinder-contextmenu-arrow {
 	width:16px;
 	height:16px;
-	background:url('../img/arrows-normal.png') 5px 4px no-repeat;
+	background:url('../images/arrows-normal.png') 5px 4px no-repeat;
 }
 
 /* arrow icon in rtl/ltr enviroment */
@@ -768,7 +768,7 @@ div.elfinder-cwd-wrapper-list tr.ui-state-default td span.ui-icon {
 
 /* for CSS style priority to ui-state-disabled - "background-image: none" */
 .elfinder .elfinder-button-icon.ui-state-disabled {
-	background-image: url('../img/toolbar.png') !important;
+	background-image: url('../images/toolbar.png') !important;
 }
 /* File: /css/cwd.css */
 /******************************************************************/
@@ -944,7 +944,7 @@ div.elfinder-cwd-wrapper-list tr.ui-state-default td span.ui-icon {
 	width:48px;
 	height:48px;
 	margin:0 auto;
-	background: url('../img/icons-big.png') 0 0 no-repeat;
+	background: url('../images/icons-big.png') 0 0 no-repeat;
 	-moz-background-clip: padding; 
 	-webkit-background-clip: padding-box; 
 	background-clip: padding-box;
@@ -954,7 +954,7 @@ div.elfinder-cwd-wrapper-list tr.ui-state-default td span.ui-icon {
 .elfinder-navbar-root-local .elfinder-cwd-icon,
 .elfinder-cwd .elfinder-navbar-root-local.elfinder-droppable-active .elfinder-cwd-icon,
 .elfinder-cwd-view-list .elfinder-navbar-root-local td .elfinder-cwd-icon {
-	background-image:url("../img/volume_icon_local.png");
+	background-image:url("../images/volume_icon_local.png");
 	background-position:0 0;
 	background-size: contain;
 }
@@ -964,7 +964,7 @@ div.elfinder-cwd-wrapper-list tr.ui-state-default td span.ui-icon {
 .elfinder-navbar-root-ftp .elfinder-cwd-icon,
 .elfinder-cwd .elfinder-navbar-root-ftp.elfinder-droppable-active .elfinder-cwd-icon,
 .elfinder-cwd-view-list .elfinder-navbar-root-ftp td .elfinder-cwd-icon  {
-	background-image:url("../img/volume_icon_ftp.png");
+	background-image:url("../images/volume_icon_ftp.png");
 	background-position:0 0;
 	background-size: contain;
 }
@@ -974,7 +974,7 @@ div.elfinder-cwd-wrapper-list tr.ui-state-default td span.ui-icon {
 .elfinder-navbar-root-sql .elfinder-cwd-icon,
 .elfinder-cwd .elfinder-navbar-root-sql.elfinder-droppable-active .elfinder-cwd-icon,
 .elfinder-cwd-view-list .elfinder-navbar-root-sql td .elfinder-cwd-icon  {
-	background-image:url("../img/volume_icon_sql.png");
+	background-image:url("../images/volume_icon_sql.png");
 	background-position:0 0;
 	background-size: contain;
 }
@@ -984,7 +984,7 @@ div.elfinder-cwd-wrapper-list tr.ui-state-default td span.ui-icon {
 .elfinder-navbar-root-dropbox .elfinder-cwd-icon,
 .elfinder-cwd .elfinder-navbar-root-dropbox.elfinder-droppable-active .elfinder-cwd-icon,
 .elfinder-cwd-view-list .elfinder-navbar-root-dropbox td .elfinder-cwd-icon  {
-	background-image:url("../img/volume_icon_dropbox.png");
+	background-image:url("../images/volume_icon_dropbox.png");
 	background-position:0 0;
 	background-size: contain;
 }
@@ -994,7 +994,7 @@ div.elfinder-cwd-wrapper-list tr.ui-state-default td span.ui-icon {
 .elfinder-navbar-root-googledrive .elfinder-cwd-icon,
 .elfinder-cwd .elfinder-navbar-root-googledrive.elfinder-droppable-active .elfinder-cwd-icon,
 .elfinder-cwd-view-list .elfinder-navbar-root-googledrive td .elfinder-cwd-icon  {
-	background-image:url("../img/volume_icon_googledrive.png");
+	background-image:url("../images/volume_icon_googledrive.png");
 	background-position:0 0;
 	background-size: contain;
 }
@@ -1004,7 +1004,7 @@ div.elfinder-cwd-wrapper-list tr.ui-state-default td span.ui-icon {
 .elfinder-navbar-root-network .elfinder-cwd-icon,
 .elfinder-cwd .elfinder-navbar-root-network.elfinder-droppable-active .elfinder-cwd-icon,
 .elfinder-cwd-view-list .elfinder-navbar-root-network td .elfinder-cwd-icon  {
-	background-image:url("../img/toolbar.png");
+	background-image:url("../images/toolbar.png");
 	background-position: 0 86%;
 	background-size: cover;
 }
@@ -1033,7 +1033,7 @@ div.elfinder-cwd-wrapper-list tr.ui-state-default td span.ui-icon {
 	left: -22px;
 	width: 21px;
 	height: 28px;
-	background: url('../img/icons-big.png') 0 0 no-repeat;
+	background: url('../images/icons-big.png') 0 0 no-repeat;
 	background-position: 0 -373px;
 	background-size: auto !important;
 	opacity: .6;
@@ -1308,7 +1308,7 @@ tr.elfinder-cwd-file td .elfinder-cwd-select {
 	position:absolute;
 	top:50%;
 	margin-top:-8px;
-	background-image:url(../img/icons-small.png);
+	background-image:url(../images/icons-small.png);
 }
 /* icon in ltr/rtl enviroment */
 .elfinder-ltr .elfinder-cwd-view-list .elfinder-cwd-icon { left:0;  }
@@ -1529,7 +1529,7 @@ tr.elfinder-cwd-file td .elfinder-cwd-select {
 	left:12px;
 	top:50%;
 	margin-top:-15px;
-	background:url("../img/dialogs.png") 0 0 no-repeat;
+	background:url("../images/dialogs.png") 0 0 no-repeat;
 }
 
 .elfinder-rtl .elfinder-dialog-icon { left:auto; right:12px;}
@@ -1577,7 +1577,7 @@ tr.elfinder-cwd-file td .elfinder-cwd-select {
 .elfinder-notify-progress {
 	width:100%;
 	height:8px;
-	background:url(../img/progress.gif) center center repeat-x;
+	background:url(../images/progress.gif) center center repeat-x;
 }
 
 .elfinder-notify-progressbar, .elfinder-notify-progress {
@@ -1663,7 +1663,7 @@ tr.elfinder-cwd-file td .elfinder-cwd-select {
 	width:14px;
 	height:14px;
 	float:left;
-	background: url("../img/spinner-mini.gif") center center no-repeat;
+	background: url("../images/spinner-mini.gif") center center no-repeat;
 	margin:0 5px; 
 }
 
@@ -1852,7 +1852,7 @@ button.elfinder-info-button {
 	display:none;
 	top:50%;
 	margin-top:-8px;
-	background-image:url("../img/arrows-normal.png");
+	background-image:url("../images/arrows-normal.png");
 	background-repeat:no-repeat;
 /*	border:1px solid #111;*/
 }
@@ -1877,7 +1877,7 @@ button.elfinder-info-button {
     margin-left: 20px;
 }
 
-.ui-state-active .elfinder-navbar-arrow { background-image:url("../img/arrows-active.png"); }
+.ui-state-active .elfinder-navbar-arrow { background-image:url("../images/arrows-active.png"); }
 
 /* collapsed/expanded arrow view */
 .elfinder-navbar-collapsed .elfinder-navbar-arrow { display:block; }
@@ -1896,7 +1896,7 @@ button.elfinder-info-button {
 	position:absolute;
 	top:50%;
 	margin-top:-8px;
-	background-image:url("../img/toolbar.png");
+	background-image:url("../images/toolbar.png");
 	background-repeat:no-repeat;
 	background-position:0 -16px;
 }
@@ -1910,12 +1910,12 @@ button.elfinder-info-button {
 .elfinder-places .elfinder-navbar-root .elfinder-navbar-icon { background-position:0 -704px; }
 
 /* root icon of each volume */
-.elfinder-tree .elfinder-navbar-root-local   .elfinder-navbar-icon { background-image:url("../img/volume_icon_local.png"); background-position:0 0; }
-.elfinder-tree .elfinder-navbar-root-ftp     .elfinder-navbar-icon { background-image:url("../img/volume_icon_ftp.png"); background-position:0 0; }
-.elfinder-tree .elfinder-navbar-root-sql     .elfinder-navbar-icon { background-image:url("../img/volume_icon_sql.png"); background-position:0 0; }
-.elfinder-tree .elfinder-navbar-root-dropbox .elfinder-navbar-icon { background-image:url("../img/volume_icon_dropbox.png"); background-position:0 0; }
-.elfinder-tree .elfinder-navbar-root-googledrive .elfinder-navbar-icon { background-image:url("../img/volume_icon_googledrive.png"); background-position:0 0; }
-.elfinder-tree .elfinder-navbar-root-network .elfinder-navbar-icon { background-image:url("../img/toolbar.png"); background-position: 0 -688px; }
+.elfinder-tree .elfinder-navbar-root-local   .elfinder-navbar-icon { background-image:url("../images/volume_icon_local.png"); background-position:0 0; }
+.elfinder-tree .elfinder-navbar-root-ftp     .elfinder-navbar-icon { background-image:url("../images/volume_icon_ftp.png"); background-position:0 0; }
+.elfinder-tree .elfinder-navbar-root-sql     .elfinder-navbar-icon { background-image:url("../images/volume_icon_sql.png"); background-position:0 0; }
+.elfinder-tree .elfinder-navbar-root-dropbox .elfinder-navbar-icon { background-image:url("../images/volume_icon_dropbox.png"); background-position:0 0; }
+.elfinder-tree .elfinder-navbar-root-googledrive .elfinder-navbar-icon { background-image:url("../images/volume_icon_googledrive.png"); background-position:0 0; }
+.elfinder-tree .elfinder-navbar-root-network .elfinder-navbar-icon { background-image:url("../images/toolbar.png"); background-position: 0 -688px; }
 
 /* icon in active/hove/dropactive state */
 .ui-state-active           .elfinder-navbar-icon, 
@@ -1935,7 +1935,7 @@ button.elfinder-info-button {
 	display:block;
 	top:50%;
 	margin-top:-7px;
-	background: url("../img/spinner-mini.gif") center center no-repeat;
+	background: url("../images/spinner-mini.gif") center center no-repeat;
 }
 /* spinner ltr/rtl enviroment */
 .elfinder-ltr .elfinder-navbar-spinner { left:0;  margin-left:-2px; }
@@ -1964,7 +1964,7 @@ button.elfinder-info-button {
 .elfinder-navbar input { width:100%; border:0px solid; margin:0; padding:0; }
 
 /* resizable */
-.elfinder-navbar .ui-resizable-handle { width:12px; background:transparent url('../img/resize.png') center center no-repeat; }
+.elfinder-navbar .ui-resizable-handle { width:12px; background:transparent url('../images/resize.png') center center no-repeat; }
 .elfinder-nav-handle-icon {
 	position:absolute;
 	top:50%;
@@ -2037,7 +2037,7 @@ button.elfinder-info-button {
 /* quicklook window */
 .elfinder-quicklook {
 	position:absolute;
-	background:url("../img/quicklook-bg.png");
+	background:url("../images/quicklook-bg.png");
 	overflow:hidden;
 	border-radius:7px;
 	-moz-border-radius:7px;
@@ -2054,7 +2054,7 @@ button.elfinder-info-button {
 	height:14px;
 	right:5px;
 	bottom:3px;
-	background:url("../img/toolbar.png") 0 -496px no-repeat;
+	background:url("../images/toolbar.png") 0 -496px no-repeat;
 }
 .elfinder-quicklook.elfinder-touch .ui-resizable-se {
 	zoom: 1.5;
@@ -2238,7 +2238,7 @@ button.elfinder-info-button {
 	height:32px;
 	margin:0 7px;
 	float:left;
-	background:url("../img/quicklook-icons.png") 0 0 no-repeat;
+	background:url("../images/quicklook-icons.png") 0 0 no-repeat;
 	
 }
 
@@ -2619,7 +2619,7 @@ embed.elfinder-quicklook-preview-audio {
 	width:16px;
 	height:16px;
 	display:block;
-	background:url('../img/toolbar.png')  no-repeat;
+	background:url('../images/toolbar.png')  no-repeat;
 }
 
 .elfinder-touch .elfinder-button-icon {
@@ -2677,7 +2677,7 @@ embed.elfinder-quicklook-preview-audio {
 .elfinder .elfinder-menubutton { overflow:visible; }
 
 /* button with spinner icon */
-.elfinder-button-icon-spinner  { background: url("../img/spinner-mini.gif") center center no-repeat; }
+.elfinder-button-icon-spinner  { background: url("../images/spinner-mini.gif") center center no-repeat; }
 
 /* menu */
 .elfinder-button-menu {

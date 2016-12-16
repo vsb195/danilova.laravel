@@ -1,23 +1,28 @@
-@extends('site.main')
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="utf-8">
+        <title>Блог</title>
+        <meta name="description" value="{{$article->meta_description}}">
+        <meta name="keywords" value="{{$article->meta_keywords}}">
+    </head>
+    <body>
+        <h2>{{$article->title}}</h2>
+        <small>Дата статьи: {{$article->updated_at}}</small>
+        <div>{!! $article->content !!}</div>
+        @if($article->comments_enable==1)
+          @include('site.comment')
+        @endif
+		<div class="comments">
+			<ul>
+			@foreach($comments as $comment)
+				<li>
+					Автор: {{$comment->author}}<br>
+					{{$comment->content}}
+				</li>
+			@endforeach
+			</ul>
+		</div>
 
-@section('content')
-<div class="container">
-    <div class="row">
-        <div class="col-md-1"></div>
-        <div class="col-md-10 ">
-            <div class="panel panel-default">
-                <div class="panel-heading"><img src="{{$article->preview}}" style="width:100%;"></div>
-
-                <div class="panel-body">
-                    <h2>{{$article->title}}</h2>
-					<small>Дата статьи: {{$article->updated_at}}</small>
-					<div>
-					{{$article->content}}
-					</div>
-                </div>
-            </div>
-        </div>
-        <div class="col-md-1"></div>
-    </div>
-</div>
-@endsection
+    </body>
+</html>
