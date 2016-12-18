@@ -15,7 +15,7 @@
 			@foreach($comments as $comment)
 				<li>
 					Автор: {{$comment->author}}<br>
-					{{$comment->content}}
+					<p>{{$comment->content}}</p>
 				</li>
 			@endforeach
 			</ul>

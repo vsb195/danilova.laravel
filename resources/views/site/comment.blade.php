@@ -1,10 +1,14 @@
+<script src="{{asset('js/nicEdit.js')}}"></script>
+	<script type="text/javascript">
+		bkLib.onDomLoaded(function() { nicEditors.allTextAreas() });
+	</script>
 <form method="POST">
     Ваше имя:<br>
     <input type="text" name="author" required><br>
     Ваш email:<br>
     <input type="email" name="email" required><br>
     Ваше сообщение:<br>
-    <textarea name="content" required></textarea><br>
+    <textarea name="content" style="width: 100%;"></textarea><br>
     <input type="hidden" name="_token" value="{{csrf_token()}}">
     <input type="submit" value="Отправить">
 </form>

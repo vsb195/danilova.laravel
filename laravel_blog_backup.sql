@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Host: 127.0.0.1
--- Generation Time: Dec 18, 2016 at 11:43 AM
+-- Generation Time: Dec 18, 2016 at 03:29 PM
 -- Server version: 5.7.14
 -- PHP Version: 5.6.25
 
@@ -97,7 +97,9 @@ CREATE TABLE `comments` (
 
 INSERT INTO `comments` (`id`, `article_id`, `content`, `author`, `email`, `public`, `created_at`, `updated_at`) VALUES
 (3, 1, 'Каждый день бы готовила!', 'Анна', 'j81339@mvrht.com', 0, '2016-12-18 04:58:25', '2016-12-18 04:58:25'),
-(2, 1, 'Замечательная статья!', 'Анна', 'j81339@mvrht.com', 1, '2016-12-18 04:49:21', '2016-12-18 04:49:32');
+(2, 1, 'Замечательная статья!', 'Анна', 'j81339@mvrht.com', 1, '2016-12-18 04:49:21', '2016-12-18 04:49:32'),
+(4, 1, 'Замечательно!', 'Анна', 'j81339@mvrht.com', 1, '2016-12-18 08:21:42', '2016-12-18 08:22:00'),
+(5, 2, '<font size="4"><b><u>Обожаю эклеры!</u></b></font>', 'Григорий', 'leps@sam.ru', 1, '2016-12-18 09:13:21', '2016-12-18 09:14:38');
 
 -- --------------------------------------------------------
 
@@ -180,7 +182,8 @@ CREATE TABLE `users` (
 --
 
 INSERT INTO `users` (`id`, `name`, `email`, `password`, `remember_token`, `created_at`, `updated_at`) VALUES
-(1, 'vvv', 'vsb95@mail.ru', '$2y$10$l3cGM4QhaY9TCQ3EFZKI8OALjUgrqQbnYrMjH2oYi9F.3pLRW5qtW', NULL, '2016-12-16 10:25:15', '2016-12-16 10:25:15');
+(1, 'vvv', 'vsb95@mail.ru', '$2y$10$l3cGM4QhaY9TCQ3EFZKI8OALjUgrqQbnYrMjH2oYi9F.3pLRW5qtW', NULL, '2016-12-16 10:25:15', '2016-12-16 10:25:15'),
+(2, 'Аня', '5412512@mail.ru', '$2y$10$cp2phKlD../yhuRY8BkydemN6EjcY7JMCu3Jaw0TKfq.5sxMMO0xm', 'uJiNnjdn2TcHuReTXDSxJeUps5v8WZQfz3e8mHHq3P4dpCeyCtdV9FCkureg', '2016-12-18 08:13:16', '2016-12-18 08:52:15');
 
 --
 -- Indexes for dumped tables
@@ -238,7 +241,7 @@ ALTER TABLE `users`
 -- AUTO_INCREMENT for table `articles`
 --
 ALTER TABLE `articles`
-  MODIFY `id` int(10) UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=10;
+  MODIFY `id` int(10) UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=11;
 --
 -- AUTO_INCREMENT for table `categories`
 --
@@ -248,7 +251,7 @@ ALTER TABLE `categories`
 -- AUTO_INCREMENT for table `comments`
 --
 ALTER TABLE `comments`
-  MODIFY `id` int(10) UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=4;
+  MODIFY `id` int(10) UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=6;
 --
 -- AUTO_INCREMENT for table `migrations`
 --
@@ -263,7 +266,7 @@ ALTER TABLE `pages`
 -- AUTO_INCREMENT for table `users`
 --
 ALTER TABLE `users`
-  MODIFY `id` int(10) UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=2;
+  MODIFY `id` int(10) UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=3;
 /*!40101 SET CHARACTER_SET_CLIENT=@OLD_CHARACTER_SET_CLIENT */;
 /*!40101 SET CHARACTER_SET_RESULTS=@OLD_CHARACTER_SET_RESULTS */;
 /*!40101 SET COLLATION_CONNECTION=@OLD_COLLATION_CONNECTION */;
