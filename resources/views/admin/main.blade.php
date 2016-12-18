@@ -81,7 +81,7 @@
 							<li><a href="/adminzone">Админка</a></li>
 							<li><a href="/adminzone/categories/">Категории</a></li>
 							<li><a href="/adminzone/articles">Статьи</a></li>
-							<li><a href="/adminzone/comments">Комментарии</a></li>
+							<li><a href="/adminzone/comments">Комментарии</a></li>							
                             <li class="dropdown">
                                 <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-expanded="false">
                                     {{ Auth::user()->name }} <span class="caret"></span>
@@ -101,17 +101,7 @@
                                     </li>
                                 </ul>
                             </li>		
-							<li class="dropdown">
-                                <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-expanded="false">
-                                    {{ Auth::user()->name }} <span class="caret"></span>
-                                </a>
-
-                                <ul class="dropdown-menu" role="menu">
-									@foreach($menu as $item)
-										<li><a href="{{action('PagesController@show',['id'=>$item->id])}}">{{$item->title}}</a></li>
-									@endforeach
-                                </ul>
-                            </li>	
+								
 
 							
 							<!--<li><a href="{{ URL::route('account-sign-out') }}">Выход</a></li>-->

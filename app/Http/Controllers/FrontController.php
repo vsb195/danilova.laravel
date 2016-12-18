@@ -19,6 +19,12 @@ class FrontController extends Controller
 	{
 		$comments = Article::where('public', '=', 1)->find($id)->comments()->where('public', '=', '1')->get();
 		$article = Article::where('public', '=', 1)->find($id);
-		return view('site.show', ['article'=>$article, 'comments'=>$comments]);
+		return view('site/show', ['article'=>$article, 'comments'=>$comments]);
+	}
+	
+	public function category($id)
+	{
+		$articles=Article::where('category_id','=',$id)->get();
+		return view('site/index',['articles'=>$articles]);
 	}
 }

@@ -1,10 +1,10 @@
 <form method="POST">
     Ваше имя:<br>
-    <input type="text" name="author"><br>
+    <input type="text" name="author" required><br>
     Ваш email:<br>
-    <input type="text" name="email"><br>
+    <input type="email" name="email" required><br>
     Ваше сообщение:<br>
-    <textarea name="content"></textarea><br>
+    <textarea name="content" required></textarea><br>
     <input type="hidden" name="_token" value="{{csrf_token()}}">
     <input type="submit" value="Отправить">
 </form>

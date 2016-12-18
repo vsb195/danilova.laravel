@@ -10,7 +10,7 @@
 Название статьи:<br>
 <input type="text" name="title"><br>
 Текст статьи:<br>
-<textarea name="content" id="editor" style="width: 100%;"></textarea><br>
+<textarea name="content" style="width: 100%;"></textarea><br>
 Категория:<br>
 <select name="category_id">
 @foreach($categories as $category)

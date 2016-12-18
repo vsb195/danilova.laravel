@@ -9,6 +9,12 @@ class PagesController extends Controller
     public function show($id)
 	{
 		$page = Page::where('public', '=', 1)->find($id);
-		return view('site/main', ['page'=>$page]);
+		return view('site/static', ['page'=>$page]);
+	}
+	
+	public function learn($id)
+	{
+		$page = Page::where('public', '=', 1)->find($id);
+		return view('site/static', ['page'=>$page]);
 	}
 }

@@ -1,12 +1,9 @@
-<!DOCTYPE html>
-<html>
-    <head>
-        <meta charset="utf-8">
-        <title>Блог</title>
-        <meta name="description" value="{{$article->meta_description}}">
-        <meta name="keywords" value="{{$article->meta_keywords}}">
-    </head>
-    <body>
+@extends('site.main')
+
+@section('content')
+		<div class="img-block">
+			<img class="article-list-image" src="{{$article->preview}}" style="width:100%;">
+		</div>
         <h2>{{$article->title}}</h2>
         <small>Дата статьи: {{$article->updated_at}}</small>
         <div>{!! $article->content !!}</div>
@@ -23,6 +20,4 @@
 			@endforeach
 			</ul>
 		</div>
-
-    </body>
-</html>
+@endsection

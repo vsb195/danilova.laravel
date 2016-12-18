@@ -17,6 +17,8 @@ Route::get('/', function () {
 */
 Route::get('/','FrontController@index');
 Route::get('/show/{id}','FrontController@show');
+Route::get('/category/{id}','FrontController@category');
+Route::get('/learn/{id}','PagesController@learn');
 
 Route::group(['prefix'=>'adminzone'], function()
 {

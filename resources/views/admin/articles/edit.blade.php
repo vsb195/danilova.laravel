@@ -40,9 +40,17 @@
 <br>
 <h2>Мета</h2>
 description:<br>
-<input type="text" name="meta_description"><br>
+<input type="text" name="meta_description"
+	@if(!empty($article->meta_description))
+		value="{{$article->meta_description}}"
+	@endif
+><br>
 keywords:<br>
-<input type="text" name="meta_keywords"><br>
+<input type="text" name="meta_keywords" 
+	@if(!empty($article->meta_keywords))
+		value="{{$article->meta_keywords}}"
+	@endif
+><br>
 <input type="hidden" name="_token" value="{{csrf_token()}}">
 <input type="submit" value="Сохранить">
 </form>

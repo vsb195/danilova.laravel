@@ -7,13 +7,14 @@
             <div class="panel panel-default">
                 <div class="panel-heading">Список статей</div>
 
-                <div class="panel-body">
+                <div class="panel-body article-list">
                     @foreach($articles as $article)
 						<h2><a href="{{action('FrontController@show',['id'=>$article->id])}}">{{$article->title}}</a></h2>
 						<small>Дата статьи: {{$article->updated_at}} Коментариев: {{$article->comments()->where('public', '=', '1')->count()}}</small>					
-						<div>
-							<img src="{{$article->preview}}" style="width:100%;">{{str_limit($article->content, 150)}}
+						<div class="img-block">
+							<img class="article-list-image" src="{{$article->preview}}" style="width:100%;">
 						</div>
+						<hr>
 					@endforeach
                 </div>
             </div>

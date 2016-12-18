@@ -17,9 +17,16 @@
         <td>{{$comment->email}}</td>
         <td>{{$comment->content}}</td>
         <td>{{$comment->created_at}}</td>
-        <td>{{$comment->public}}</td>
+        <td>{{$comment->public}} (
+		@if($comment->public == 0)
+          не 
+        @endif 
+опубликован)
+		</td>
         <td><a href="{{action('CommentsController@delete', ['id'=>$comment->id])}}">Удалить</a>
-        <a href="{{action('CommentsController@published', ['id'=>$comment->id])}}">Опубликовать</a>
+		@if($comment->public != 1)
+          <a href="{{action('CommentsController@published', ['id'=>$comment->id])}}">Опубликовать</a>
+        @endif        
         </td>
     </tr>
     @endforeach
