@@ -18,8 +18,9 @@
 @endforeach
 
 </select><br>
+<!--
 <div onclick = "elFinderBrowser('preview')">Медиа  </div>
-<a href="/adminzone/elfinder">Медиа</a><br>
+<a href="/adminzone/elfinder">Медиа</a><br> -->
 Разрешить комментарии?<br>
 
 <select name="comments_enable">

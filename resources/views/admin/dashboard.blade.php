@@ -15,10 +15,9 @@
 	<li><a href="{{action('CommentsController@show')}}">Управление комментариями</a></li>
 	</ul>
 	<h2>Страницы</h2>
-	<ul>
-						
-			@foreach($menu as $item)
-					<li><a href="{{action('PagesController@learn',['id'=>$item->id])}}">{{$item->title}}</a></li>
-			@endforeach		
+	<ul>					
+		@foreach($menu as $item)
+				<li><a href="{{action('PagesController@learn',['id'=>$item->id])}}">{{$item->title}}</a></li>
+		@endforeach		
 	</ul>
 @stop
