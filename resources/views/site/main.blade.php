@@ -1,8 +1,7 @@
 <!DOCTYPE html>
 <html lang="ru">
 <head>
-    <meta charset="utf-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<meta http-equiv="content-type" content="text/html; charset=utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1">
 
     <!-- CSRF Token -->
@@ -12,7 +11,17 @@
 
     <!-- Styles -->
     <link href="/css/app.css" rel="stylesheet">
-
+		<link rel="stylesheet" href="/css/skel.css" />
+		<link rel="stylesheet" href="/css/style.css" />
+		<link rel="stylesheet" href="/css/style-desktop.css" />
+		<link rel="stylesheet" href="/css/style-wide.css" />
+		<!--[if lte IE 8]><script src="css/ie/html5shiv.js"></script><![endif]-->
+		<script src="/js/jquery.min.js"></script>
+		<script src="/js/skel.min.js"></script>
+		<script src="/js/skel-layers.min.js"></script>
+		<script src="/js/init.js"></script>
+		
+	
     <!-- Scripts -->
     <script>
         window.Laravel = <?php echo json_encode([
@@ -20,97 +29,81 @@
         ]); ?>
     </script>
 </head>
-<body>
-    <div id="app">
-        <nav class="navbar navbar-default navbar-static-top">
-            <div class="container">
-                <div class="navbar-header">
+<!--
+		Note: Set the body element's class to "left-sidebar" to position the sidebar on the left.
+		Set it to "right-sidebar" to, you guessed it, position it on the right.
+	-->
+	<body class="left-sidebar">
 
-                    <!-- Collapsed Hamburger -->
-                    <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#app-navbar-collapse">
-                        <span class="sr-only">Toggle Navigation</span>
-                        <span class="icon-bar"></span>
-                        <span class="icon-bar"></span>
-                        <span class="icon-bar"></span>
-                    </button>
+		<!-- Wrapper -->
+			<div id="wrapper">
 
-                    <!-- Branding Image -->
-                    <a class="navbar-brand" href="{{ url('/') }}">
-                        {{ config('app.name', 'Laravel') }}
-                    </a>
-                </div>
+				<!-- Content -->
+					<div id="content">
+						<div class="inner">
+							@yield('content')
+						</div>
+					</div>
 
-                <div class="collapse navbar-collapse" id="app-navbar-collapse">
-                    <!-- Left Side Of Navbar -->
-                    <ul class="nav navbar-nav">
-                        &nbsp;
-                    </ul>
+				<!-- Sidebar -->
+					<div id="sidebar">
+						<!-- Logo -->
+							<h1 id="logo"><a href="/">Блог выпечки</a></h1>
 					
-                    <!-- Right Side Of Navbar -->
-                    <ul class="nav navbar-nav navbar-right">
-						
-						<li><a href="/">Все</a>                                                                 </li>
-						<li><a href="{{action('FrontController@category',['id'=>2])}}">Сладкая выпечка</a>      </li>
-						<li><a href="{{action('FrontController@category',['id'=>3])}}">НЕочСладкая выпечка</a>  </li>
-						
-						@if (count($menu) > 1)
-							<li class="dropdown">
-                              <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-expanded="false">
-                                  ... <span class="caret"></span>
-                              </a>
-                              <ul class="dropdown-menu" role="menu">
-								@foreach($menu as $item)
-									<li><a href="{{action('PagesController@learn',['id'=>$item->id])}}">{{$item->title}}</a></li>
-								@endforeach
-                              </ul>
-							</li>
-						@else					
-							@foreach($menu as $item)
-									<li><a href="{{action('PagesController@learn',['id'=>$item->id])}}">{{$item->title}}</a></li>
-							@endforeach
-						@endif
-						
-                        <!-- Authentication Links -->
-                        @if (Auth::guest())
+						<!-- Nav -->
+							<nav id="nav">
+								<ul>
+									<li><a href="/">Все</a></li>
+						<li><a href="{{action('FrontController@category',['id'=>2])}}">Сладкая выпечка</a></li>
+						<li><a href="{{action('FrontController@category',['id'=>3])}}">Несладкая выпечка</a></li>
+				@foreach($menu as $item)
+						<li><a href="{{action('PagesController@learn',['id'=>$item->id])}}">{{$item->title}}</a></li>
+				@endforeach	
+						@if (Auth::guest())
                             <li><a href="{{ url('/login') }}">Вход</a></li>
                             <li><a href="{{ url('/register') }}">Регистрация</a></li>
                         @else
-                            <li class="dropdown">
-                                <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-expanded="false">
-                                    {{ Auth::user()->name }} <span class="caret"></span>
+							@if (Auth::user()->is_admin==1)
+							<li>
+                                <a href="/adminzone">
+                                    Панель управления
+                                </a>
+                            </li>
+							@endif	
+                            <li>
+                                <a href="{{ url('/logout') }}"
+                                    onclick="event.preventDefault();
+                                             document.getElementById('logout-form').submit();">
+                                    Выход
                                 </a>
 
-                                <ul class="dropdown-menu" role="menu">
-									<li>
-                                        <a href="/adminzone">
-                                            Панель управления
-                                        </a>
-                                    </li>
-                                    <li>
-                                        <a href="{{ url('/logout') }}"
-                                            onclick="event.preventDefault();
-                                                     document.getElementById('logout-form').submit();">
-                                            Выход
-                                        </a>
-
-                                        <form id="logout-form" action="{{ url('/logout') }}" method="POST" style="display: none;">
-                                            {{ csrf_field() }}
-                                        </form>
-                                    </li>
-                                </ul>
+                                <form id="logout-form" action="{{ url('/logout') }}" method="POST" style="display: none;">
+                                    {{ csrf_field() }}
+                                </form>
                             </li>
-                        @endif
-                    </ul>
-                </div>
-            </div>
-        </nav>
-
-        <div class="container">
-			@yield('content')
-		</div>
-    </div>
-
+                        @endif				
+                                    	
+                        		</ul>
+							</nav>
+					
+						<!-- Text -->
+							<section class="box text-style1">
+								<div class="inner">
+									<p>
+										<strong>Striped:</strong> A free and fully responsive HTML5 site
+										template designed by <a href="http://n33.co/">AJ</a> for <a href="http://html5up.net/">HTML5 UP</a>
+									</p>
+								</div>
+							</section>
+								
+					
+						<!-- Copyright -->
+							<ul id="copyright">
+								<li>&copy; Untitled.</li><li>Design: <a href="http://html5up.net">HTML5 UP</a></li>
+							</ul>
+					</div>
+			</div>
     <!-- Scripts -->
     <script src="/js/app.js"></script>
-</body>
+	</body>
 </html>

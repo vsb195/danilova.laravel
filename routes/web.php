@@ -53,6 +53,7 @@ Route::group(array('before' => 'auth'), function() {
 
 });
 Route::post('/show/{id}','CommentsController@save');
+Route::post('/learn/{id}','FrontController@sendMail'); // Отправляем письмецо
 
 Auth::routes();
 
