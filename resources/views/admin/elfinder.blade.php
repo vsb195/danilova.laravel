@@ -1,4 +1,4 @@
-<!DOCTYPE html>
+﻿<!DOCTYPE html>
 <html>
   <head>
     <meta charset="utf-8">
@@ -7,7 +7,7 @@
 
     <!-- Section CSS -->
     <!-- jQuery UI (REQUIRED) -->
-    <link rel="stylesheet" type="text/css" href="//ajax.googleapis.com/ajax/libs/jqueryui/1.12.0/themes/smoothness/jquery-ui.css">
+    <link rel="stylesheet" type="text/css" href="{{asset('css/jquery-ui.css')}}">
 
     <!-- elFinder CSS (REQUIRED) -->
     <link rel="stylesheet" type="text/css" href="{{asset('css/elfinder.min.css')}}">
@@ -15,14 +15,15 @@
 
     <!-- Section JavaScript -->
     <!-- jQuery and jQuery UI (REQUIRED) -->
-    <script src="//ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
-    <script src="//ajax.googleapis.com/ajax/libs/jqueryui/1.12.0/jquery-ui.min.js"></script>
+    <script src="{{asset('js/jquery.min.js')}}"></script>
+    <script src="{{asset('js/jquery-ui.min.js')}}"></script>
 
     <!-- elFinder JS (REQUIRED) -->
     <script src="{{asset('js/elfinder.min.js')}}"></script>
     <!-- elFinder translation (OPTIONAL) -->
     <script src="{{asset('js/i18n/elfinder.ru.js')}}"></script>
 
+    <!-- elFinder initialization (REQUIRED) -->
     <!-- elFinder initialization (REQUIRED) -->
     <script type="text/javascript" charset="utf-8">
     var FileBrowserDialogue = {
@@ -55,6 +56,7 @@
       }).elfinder('instance');
     });
     </script>
+
   </head>
   <body>
 

@@ -1,9 +1,5 @@
 @extends('admin.main')
 @section('content')
-	<script src="{{asset('js/nicEdit.js')}}"></script>
-<script type="text/javascript">
-	bkLib.onDomLoaded(function() { nicEditors.allTextAreas() });
-</script>
 <form method="POST" action="{{action('ArticlesController@update',['articles'=>$article->id])}}" enctype="multipart/form-data">
 <input type="hidden" name="_method" value="put">
 Превью:<br>
@@ -14,7 +10,7 @@
 Название статьи:<br>
 <input type="text" name="title" value="{{$article->title}}"><br>
 Текст статьи:<br>
-<textarea name="content" style="width: 100%;">{{$article->content}}</textarea><br>
+<textarea id="editor" name="content" style="width: 100%;">{{$article->content}}</textarea><br>
 Категория:<br>
 <select name="category_id">
 @foreach($categories as $category)

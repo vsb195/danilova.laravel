@@ -40,7 +40,8 @@ class ArticlesController extends Controller
 		{
 			Article::create($request->all()); // если картинка не передана, то сохраняем запрос, как есть.
 		}
-		return back()->with('message','Статья добавлена');
+		return redirect()->action('ArticlesController@index');
+		//return back()->with('message','Статья добавлена');
 	}
 	
 	public function destroy($id)
@@ -80,6 +81,7 @@ class ArticlesController extends Controller
 		{
 			$article->update($request->all());
 		}
-		return back()->with('message', 'Статья изменена');
+		return redirect()->action('ArticlesController@index');
+		//return back()->with('message', 'Статья изменена');
     }
 }

@@ -20,8 +20,9 @@
             'csrfToken' => csrf_token(),
         ]); ?>
     </script>
-	<script src="{{asset('js/jquery-2.1.4.min.js')}}"></script>
+	<!--<script src="{{asset('js/jquery-2.1.4.min.js')}}"></script>-->
 	<script src="{{asset('js/tinymce/tinymce.min.js')}}"></script>
+	<script src="{{asset('js/jquery.min.js')}}"></script>
 	<script>
         tinymce.init({
             plugins: "image",
@@ -42,7 +43,8 @@
             });
             return false;
         }
-    </script>
+        </script>
+
 </head>
 <body>
     <div id="app">

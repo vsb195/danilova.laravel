@@ -1,26 +1,20 @@
 @extends('admin.main')
 @section('content')
-	<script src="{{asset('js/nicEdit.js')}}"></script>
-	<script type="text/javascript">
-		bkLib.onDomLoaded(function() { nicEditors.allTextAreas() });
-	</script>
+	
 <form method="POST" action="{{action('ArticlesController@store')}}" enctype="multipart/form-data">
 Превью:<br>
-<input type="file" name="preview"><br>
+<!--<input type="file" name="preview"><br>-->
+<input hidden type="text" name="preview"><br>
 Название статьи:<br>
 <input type="text" name="title"><br>
 Текст статьи:<br>
-<textarea name="content" style="width: 100%;"></textarea><br>
+<textarea name="content" style="width: 100%;" id="editor"></textarea><br>
 Категория:<br>
 <select name="category_id">
-@foreach($categories as $category)
+	@foreach($categories as $category)
 	<option value="{{$category->id}}">{{$category->title}}</option>
-@endforeach
-
+	@endforeach
 </select><br>
-<!--
-<div onclick = "elFinderBrowser('preview')">Медиа  </div>
-<a href="/adminzone/elfinder">Медиа</a><br> -->
 Разрешить комментарии?<br>
 
 <select name="comments_enable">
