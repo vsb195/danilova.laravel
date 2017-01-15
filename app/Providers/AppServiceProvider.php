@@ -2,6 +2,7 @@
 
 namespace App\Providers;
 use App\Page;
+use App\Category;
 use Illuminate\Support\ServiceProvider;
 
 class AppServiceProvider extends ServiceProvider
@@ -14,6 +15,7 @@ class AppServiceProvider extends ServiceProvider
     public function boot()
     {
         view()->share('menu', Page::all()->where('public', '=', '1'));
+        view()->share('categories', Category::all());
     }
 
 

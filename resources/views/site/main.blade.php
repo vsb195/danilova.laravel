@@ -54,8 +54,28 @@
 							<nav id="nav">
 								<ul>
 									<li><a href="/">Все</a></li>
-						<li><a href="{{action('FrontController@category',['id'=>2])}}">Сладкая выпечка</a></li>
-						<li><a href="{{action('FrontController@category',['id'=>3])}}">Несладкая выпечка</a></li>
+							@if (count($categories)>2)
+						<!--
+							<li class="dropdown">
+									<a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-expanded="false">
+										Категории <span class="caret"></span>
+									</a>
+	
+									<ul class="dropdown-menu" role="menu">
+										@foreach($categories as $category)
+											<li>
+												<a href="{{action('FrontController@category',['id'=>$category->id])}}">{{$category->title}}</a>
+											</li>
+										@endforeach
+									</ul>
+								</li>	
+						-->								
+							@else
+								
+							@endif	
+							@foreach($categories as $category)
+									<li><a href="{{action('FrontController@category',['id'=>$category->id])}}">{{$category->title}}</a></li>
+								@endforeach	
 				@foreach($menu as $item)
 						<li><a href="{{action('PagesController@learn',['id'=>$item->id])}}">{{$item->title}}</a></li>
 				@endforeach	
